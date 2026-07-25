@@ -21,7 +21,15 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
         ),
       ),
-      home: Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Flutter App'),
+          centerTitle: false,
+          leading: Icon(Icons.login),
+          actions: [Text("This is an action!"), Icon(Icons.login)],
+          backgroundColor: Colors.teal,
+        ),
+      ),
     );
   }
 }
