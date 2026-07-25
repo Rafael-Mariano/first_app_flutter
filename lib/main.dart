@@ -22,12 +22,16 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Flutter App'),
-          centerTitle: false,
-          leading: Icon(Icons.login),
-          actions: [Text("This is an action!"), Icon(Icons.login)],
-          backgroundColor: Colors.teal,
+        appBar: AppBar(title: Text('Flutter App'), centerTitle: true),
+        bottomNavigationBar: NavigationBar(
+          destinations: [
+            NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+            NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
+          ],
+          onDestinationSelected: (int value) {
+            print(value);
+          },
+          selectedIndex: 0,
         ),
       ),
     );
