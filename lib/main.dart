@@ -110,6 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
               trailing: Text('By Rafael'),
               onTap: () {
                 // Here you can put a function inside
+                print('The ListTile was clicked!');
               },
             ),
           ],
