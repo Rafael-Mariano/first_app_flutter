@@ -23,6 +23,24 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(title: Text('Flutter App'), centerTitle: true),
+        floatingActionButton: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            FloatingActionButton(
+              onPressed: () {
+                print('Click here to add objects!');
+              },
+              child: Icon(Icons.add),
+            ),
+            SizedBox(height: 10.0),
+            FloatingActionButton(
+              onPressed: () {
+                print('Click here to add objects!');
+              },
+              child: Icon(Icons.add),
+            ),
+          ],
+        ),
         bottomNavigationBar: NavigationBar(
           destinations: [
             NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
