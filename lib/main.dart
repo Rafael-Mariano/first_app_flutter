@@ -96,25 +96,19 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         leading: Icon(Icons.notification_add, color: Colors.amber),
       ),
-      body: Container(
-        child: Stack(
-          children: [
-            SizedBox(
-              height: 300,
-              child: Center(child: Text("This is the app!")),
-            ),
-            ListTile(
-              leading: Icon(Icons.web_stories_rounded, color: Colors.red),
-              tileColor: Colors.brown,
-              title: Text("This is a listtile!"),
-              trailing: Text('By Rafael'),
-              onTap: () {
-                // Here you can put a function inside
-                print('The ListTile was clicked!');
-              },
-            ),
-          ],
-        ),
+      body: Wrap(
+        children: [
+          Text(
+            "This is a RowThis is a RowThis is a RowThis is a RowThis is a RowThis is a RowThis is a RowThis is a Row",
+          ),
+          Text("This is a Row"),
+          Text("This is a Row"),
+          Text("This is a Row"),
+          Text("This is a Row"),
+          Text("This is a Row"),
+          Text("This is a Row"),
+          Text("This is a Row"),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
