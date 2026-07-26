@@ -1,4 +1,4 @@
-import 'package:first_app_flutter/widgets/navbar_widget.dart';
+import 'package:first_app_flutter/views/widget_tree.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -28,10 +28,7 @@ class _MyAppState extends State<MyApp> {
           seedColor: Colors.green,
         ),
       ),
-      home: Scaffold(
-        appBar: AppBar(title: Center(child: Text('Flutter Mapp'))),
-        bottomNavigationBar: NavbarWidget(),
-      ),
+      home: WidgetTree(),
     );
   }
 }
