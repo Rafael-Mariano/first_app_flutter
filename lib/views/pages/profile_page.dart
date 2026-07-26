@@ -20,9 +20,9 @@ class _ProfilePageState extends State<ProfilePage> {
           TextField(
             controller: controller,
             decoration: InputDecoration(border: OutlineInputBorder()),
-            onEditingComplete: () {
-              setState(() {});
-            },
+            //! When you use Arrow function like this '() =>', you are telling
+            //! that have just one function to use.
+            onEditingComplete: () => setState(() {}),
           ),
           Text(controller.text),
           Checkbox(
