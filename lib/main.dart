@@ -1,3 +1,4 @@
+import 'package:first_app_flutter/data/notifiers.dart';
 import 'package:first_app_flutter/views/widget_tree.dart';
 import 'package:flutter/material.dart';
 
@@ -20,15 +21,20 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          brightness: Brightness.dark,
-          seedColor: Colors.green,
-        ),
-      ),
-      home: WidgetTree(),
+    return ValueListenableBuilder(
+      valueListenable: isDarkModeNotifier,
+      builder: (context, isDarkMode, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(
+              brightness: isDarkMode ? Brightness.dark : Brightness.light,
+              seedColor: Colors.green,
+            ),
+          ),
+          home: WidgetTree(),
+        );
+      },
     );
   }
 }
