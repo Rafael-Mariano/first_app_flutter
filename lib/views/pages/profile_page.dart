@@ -75,7 +75,13 @@ class _ProfilePageState extends State<ProfilePage> {
                 });
               },
             ),
-            Image.asset('assets/images/apple.jpg'),
+            //! This is one form to make a gesture detection
+            GestureDetector(
+              onTap: () => setState(() {
+                print("Image Selected!");
+              }),
+              child: Image.asset('assets/images/apple.jpg'),
+            ),
           ],
         ),
       ),
