@@ -26,7 +26,10 @@ class _ProfilePageState extends State<ProfilePage> {
             onEditingComplete: () => setState(() {}),
           ),
           Text(controller.text),
-          Checkbox(
+          //! When you use 'adaptative' in Widgets, it tells flutter to adapte
+          //! your code to change automatically the apparence on diferrents devices
+          //! like Android, IOS, or just a WebPage
+          Checkbox.adaptive(
             tristate: true,
             value: isCheck,
             onChanged: (bool? value) {
@@ -35,7 +38,7 @@ class _ProfilePageState extends State<ProfilePage> {
               });
             },
           ),
-          CheckboxListTile(
+          CheckboxListTile.adaptive(
             tristate: true,
             title: Text('Click me'),
             value: isCheck,
@@ -45,14 +48,14 @@ class _ProfilePageState extends State<ProfilePage> {
               });
             },
           ),
-          Switch(
+          Switch.adaptive(
             value: isSwitched,
             //! I have made use this form using arrow function
             onChanged: (bool value) => setState(() {
               isSwitched = !isSwitched;
             }),
           ),
-          SwitchListTile(
+          SwitchListTile.adaptive(
             title: Text("I don't know"),
             value: isSwitched,
             //! I have made this format using multiple function
