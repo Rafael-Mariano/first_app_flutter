@@ -10,6 +10,7 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   TextEditingController controller = TextEditingController();
   bool? isCheck = false;
+  bool isSwitched = false;
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +42,23 @@ class _ProfilePageState extends State<ProfilePage> {
             onChanged: (bool? value) {
               setState(() {
                 isCheck = value;
+              });
+            },
+          ),
+          Switch(
+            value: isSwitched,
+            //! I have made use this form using arrow function
+            onChanged: (bool value) => setState(() {
+              isSwitched = !isSwitched;
+            }),
+          ),
+          SwitchListTile(
+            title: Text("I don't know"),
+            value: isSwitched,
+            //! I have made this format using multiple function
+            onChanged: (bool value) {
+              setState(() {
+                isSwitched = value;
               });
             },
           ),
