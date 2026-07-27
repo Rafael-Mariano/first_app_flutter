@@ -35,11 +35,11 @@ class WidgetTree extends StatelessWidget {
               //! and it signs that have no way to return.
               //! In this case there is no necessary use replace on page, because
               //! if you return there is a blank page
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return SettingsPage();
+                    return SettingsPage(title: 'Settings');
                   },
                 ),
               );
