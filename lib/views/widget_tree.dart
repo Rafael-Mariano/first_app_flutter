@@ -1,6 +1,7 @@
 import 'package:first_app_flutter/data/notifiers.dart';
 import 'package:first_app_flutter/views/pages/home_page.dart';
 import 'package:first_app_flutter/views/pages/profile_page.dart';
+import 'package:first_app_flutter/views/pages/settings_page.dart';
 import 'package:first_app_flutter/views/widgets/navbar_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -27,6 +28,19 @@ class WidgetTree extends StatelessWidget {
                     : Icon(Icons.dark_mode);
               },
             ),
+          ),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SettingsPage();
+                  },
+                ),
+              );
+            },
+            icon: Icon(Icons.settings),
           ),
         ],
       ),
