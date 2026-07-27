@@ -31,7 +31,11 @@ class WidgetTree extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
-              Navigator.push(
+              //! When you use the pushReplacement, it close the previously page
+              //! and it signs that have no way to return.
+              //! In this case there is no necessary use replace on page, because
+              //! if you return there is a blank page
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
                   builder: (context) {
