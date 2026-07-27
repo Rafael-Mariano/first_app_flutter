@@ -12,6 +12,7 @@ class _ProfilePageState extends State<ProfilePage> {
   bool? isCheck = false;
   bool isSwitched = false;
   double slideValue = 0.0;
+  String? menuItem = 'e1';
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +21,18 @@ class _ProfilePageState extends State<ProfilePage> {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
+            DropdownButton(
+              value: menuItem,
+              items: [
+                DropdownMenuItem(value: 'e1', child: Text('Element 1')),
+                DropdownMenuItem(value: 'e2', child: Text('Element 2')),
+              ],
+              onChanged: (String? value) {
+                setState(() {
+                  menuItem = value;
+                });
+              },
+            ),
             TextField(
               controller: controller,
               decoration: InputDecoration(border: OutlineInputBorder()),
