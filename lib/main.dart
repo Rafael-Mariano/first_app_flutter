@@ -1,5 +1,5 @@
 import 'package:first_app_flutter/data/notifiers.dart';
-import 'package:first_app_flutter/views/widget_tree.dart';
+import 'package:first_app_flutter/views/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -32,7 +32,7 @@ class _MyAppState extends State<MyApp> {
               seedColor: Colors.green,
             ),
           ),
-          home: WidgetTree(),
+          home: WelcomePage(),
         );
       },
     );
