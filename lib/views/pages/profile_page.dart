@@ -92,11 +92,29 @@ class _ProfilePageState extends State<ProfilePage> {
                 });
               },
               child: Container(
-                height: 200,
+                height: 50,
                 width: double.infinity,
                 color: Colors.white12,
               ),
             ),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red,
+                foregroundColor: Colors.amber,
+              ),
+              child: Text('Click me!'),
+            ),
+            ElevatedButton(onPressed: () {}, child: Text('Click me!')),
+            FilledButton(
+              onPressed: () {},
+              style: FilledButton.styleFrom(),
+              child: Text('Click me!'),
+            ),
+            TextButton(onPressed: () {}, child: Text('Click me!')),
+            OutlinedButton(onPressed: () {}, child: Text('Click me!')),
+            CloseButton(),
+            BackButton(),
           ],
         ),
       ),
