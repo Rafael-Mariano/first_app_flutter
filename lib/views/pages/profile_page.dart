@@ -75,12 +75,27 @@ class _ProfilePageState extends State<ProfilePage> {
                 });
               },
             ),
-            //! This is one form to make a gesture detection
+            //! This is one form to make a gesture detection on an image
             GestureDetector(
               onTap: () => setState(() {
                 print("Image Selected!");
               }),
               child: Image.asset('assets/images/apple.jpg'),
+            ),
+
+            //! This is another way to make anything clikable
+            InkWell(
+              splashColor: Colors.green,
+              onTap: () {
+                setState(() {
+                  print("Image Selection 2 form");
+                });
+              },
+              child: Container(
+                height: 200,
+                width: double.infinity,
+                color: Colors.white12,
+              ),
             ),
           ],
         ),
