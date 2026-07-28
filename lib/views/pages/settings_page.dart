@@ -46,6 +46,20 @@ class _SettingsPageState extends State<SettingsPage> {
                 },
                 child: Text('Open SnackBar!'),
               ),
+              Padding(padding: EdgeInsets.all(3.0)),
+              //! Here is how you can create a divider
+              Divider(
+                color: Colors.green,
+                thickness: 3.0,
+                endIndent: 50.0,
+                radius: BorderRadius.circular(5.0),
+              ),
+              //! Here is how to create a vertical divider
+              Container(
+                height: 50.0,
+                child: VerticalDivider(color: Colors.green, thickness: 3.0),
+              ),
+              Padding(padding: EdgeInsets.all(3.0)),
               ElevatedButton(
                 onPressed: () {
                   showDialog(
