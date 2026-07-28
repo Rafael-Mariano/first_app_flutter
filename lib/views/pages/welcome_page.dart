@@ -1,6 +1,6 @@
 import 'package:first_app_flutter/views/widget_tree.dart';
-import 'package:first_app_flutter/views/widgets/hero_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -13,8 +13,15 @@ class WelcomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //! This widget is used to create a rectangle in another widgets inside
-            HeroWidget(),
+            Lottie.asset('assets/lotties/Smooth.json'),
+            Text(
+              'Flutter Mapp',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 50.0,
+                letterSpacing: 50.0,
+              ),
+            ),
             FilledButton(
               onPressed: () {
                 Navigator.pushReplacement(
