@@ -1,6 +1,5 @@
-import 'package:first_app_flutter/views/widget_tree.dart';
+import 'package:first_app_flutter/views/pages/login_page.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -13,26 +12,49 @@ class WelcomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Lottie.asset('assets/lotties/Smooth.json'),
-            Text(
-              'Flutter Mapp',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 50.0,
-                letterSpacing: 50.0,
+            //Lottie.asset('assets/lotties/Smooth.json'),
+            FittedBox(
+              child: Text(
+                'Flutter Mapp',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 500.0,
+                  letterSpacing: 50.0,
+                ),
               ),
             ),
+            SizedBox(height: 20.0),
             FilledButton(
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return WidgetTree();
+                      return LoginPage();
                     },
                   ),
                 );
               },
+              style: FilledButton.styleFrom(
+                minimumSize: Size(double.infinity, 40.0),
+              ),
+              child: Text('Get Started'),
+            ),
+            SizedBox(height: 5.0),
+            TextButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return LoginPage();
+                    },
+                  ),
+                );
+              },
+              style: FilledButton.styleFrom(
+                minimumSize: Size(double.infinity, 40.0),
+              ),
               child: Text('Login'),
             ),
           ],
